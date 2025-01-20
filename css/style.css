@@ -1,10 +1,10 @@
 /* css custom variables */
 :root {
   --blue-color: #2374e1;
-  --black-color: #1e1e1e;
-  --dark-gray-color: #333232;
+  --black-color: #171717;
+  --dark-gray-color: #434141;
   --charcoal-color: #222222;
-  --gray-color: #6e6e6e;
+  --gray-color: #7d7c7c;
   --light-gray-color: #aeaeae;
   --white-color: #fff;
 }
@@ -28,17 +28,58 @@ ul li {
 a {
   text-decoration: none;
 }
-button,
-input {
+button {
   border: none;
 }
 hr {
   border-bottom: 0.01px solid var(--dark-gray-color);
 }
+
+input {
+  background-color: var(--dark-gray-color);
+  color: var(--gray-color);
+  font-size: 0.85rem;
+  padding: 0.75rem;
+  border-radius: 0.9rem;
+  width: 100%;
+  border: none;
+}
+
+input::placeholder {
+  color: var(--gray-color);
+}
+.input-wrapper {
+  flex: 1;
+  position: relative;
+}
+
 .container {
   display: flex;
   height: 100vh;
+  width: 100vw;
   position: relative;
+}
+
+.icon-btn {
+  position: absolute;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+}
+.icon-btn i {
+  color: var(--white-color);
+}
+.rounded-img {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.rounded-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Start Sidebar */
@@ -76,25 +117,9 @@ hr {
   width: 2.5rem;
 }
 
-.sidebar-list li a .icon-wrapper img {
-  width: 1.6rem;
-}
-
-.sidebar-list li a .rounded-icon {
-  height: 2.5rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.sidebar-list li a .rounded-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .sidebar {
   background-color: var(--charcoal-color);
   height: 100%;
-  width: 21%;
   padding: 1.12rem;
   border-right: 0.01px solid var(--dark-gray-color);
   display: flex;
@@ -104,6 +129,7 @@ hr {
   top: 0;
   left: 0;
   overflow: auto;
+  z-index: 1;
 }
 
 /*Search Section*/
@@ -116,23 +142,11 @@ hr {
   width: 2.5rem;
 }
 
-.sidebar .search .input-wrapper {
-  flex: 1;
-  position: relative;
+.sidebar .search input {
+  padding: 0.75rem 2.5rem;
 }
-.sidebar .search .input-wrapper .search-bar {
-  background-color: var(--dark-gray-color);
-  color: var(--gray-color);
-  font-size: 0.85rem;
-  padding: 0.75rem 1rem 0.75rem 2.5rem;
-  border-radius: 0.9rem;
-  width: 100%;
-}
-.sidebar .search .input-wrapper .search-bar::placeholder {
-  color: var(--gray-color);
-  opacity: 1;
-}
-.sidebar .search .input-wrapper .search-icon {
+
+.sidebar .search .search-icon {
   position: absolute;
   color: var(--gray-color);
   left: 1rem;
@@ -146,27 +160,261 @@ hr {
   margin-top: 1.5rem;
 }
 
+/*Shortcuts Section*/
+.sidebar .shortcuts ul {
+  gap: 0rem;
+}
+
 /*Footer*/
 .sidebar .footer {
   margin-top: auto;
 }
 
-.sidebar .footer .footer-list{
+.sidebar .footer .footer-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-bottom: 0.5rem;
 }
 
-.sidebar .footer .footer-list li{
+.sidebar .footer .footer-list li {
   font-size: 0.9rem;
   color: var(--light-gray-color);
 }
 
-.sidebar .footer .footer-list li a{
+.sidebar .footer .footer-list li a {
   color: var(--light-gray-color);
 }
 
-.sidebar .footer .footer-list li span{
- margin-left: 0.2rem;
+.sidebar .footer .footer-list li span {
+  margin-left: 0.2rem;
+}
+/* End Sidebar */
+
+/* Start Main Content */
+.main-content {
+  padding-left: 21.4rem;
+  width: 100%;
+  background-color: var(--black-color);
+}
+
+/* Start Navbar */
+.main-content .navbar {
+  background-color: var(--charcoal-color);
+  display: flex;
+  border-bottom: 0.01px solid var(--dark-gray-color);
+}
+
+/* Navbar Middle Buttons*/
+.main-content .navbar .nav-btns-list {
+  display: flex;
+  margin: 0 auto;
+  flex-shrink: 0;
+  padding-top: 1.12rem;
+  gap: 3rem;
+}
+.main-content .navbar .nav-btns-list a {
+  width: 4rem;
+  text-align: center;
+}
+
+.main-content .navbar .nav-btns-list .active,
+.main-content .navbar .nav-btns-list a:active {
+  border-bottom: 2px solid var(--blue-color);
+}
+.main-content .navbar .nav-btns-list a svg {
+  fill: var(--white-color);
+}
+.main-content .navbar .nav-btns-list .active svg,
+.main-content .navbar .nav-btns-list a:active svg {
+  fill: var(--blue-color);
+}
+
+/* Navbar Right Buttons*/
+.main-content .navbar .right-nav-btns-list {
+  display: flex;
+  padding: 1.12rem;
+  flex-shrink: 0;
+  gap: 0.8rem;
+}
+.main-content .navbar .right-nav-btns-list a {
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: var(--dark-gray-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding-top: 0.2rem;
+}
+.main-content .navbar .right-nav-btns-list a svg {
+  fill: var(--white-color);
+}
+.main-content .navbar .right-nav-btns-list .active svg,
+.main-content .navbar .right-nav-btns-list a:active svg {
+  fill: var(--blue-color);
+}
+
+/* End Navbar */
+
+/* Start Content */
+.main-content .content {
+  display: flex;
+  margin-top: 2rem;
+  padding: 1.12rem;
+}
+
+.main-content .content .feed {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  width: 40%;
+}
+.main-content .content .feed .frame {
+  background-color: var(--charcoal-color);
+  border: 0.01px solid var(--dark-gray-color);
+  border-radius: 0.35rem;
+}
+
+/* Stories section */
+
+/* Tabs Part */
+.main-content .content .feed .tabs {
+  border-bottom: 0.01px solid var(--dark-gray-color);
+}
+
+.main-content .content .feed .tabs .tabs-list {
+  display: flex;
+  margin: 1.12rem 0 0 0;
+  justify-content: space-around;
+}
+
+.main-content .content .feed .tabs .tabs-list a {
+  width: 8rem;
+  height: 3rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: var(--white-color);
+}
+.main-content .content .feed .tabs .tabs-list a li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.main-content .content .feed .tabs .tabs-list .active,
+.main-content .content .feed .tabs .tabs-list a:active {
+  border-bottom: 2px solid var(--blue-color);
+  color: var(--blue-color);
+}
+.main-content .content .feed .tabs .tabs-list a svg {
+  fill: var(--white-color);
+}
+.main-content .content .feed .tabs .tabs-list .active svg,
+.main-content .content .feed .tabs .tabs-list a:active svg {
+  fill: var(--blue-color);
+}
+
+/*Stories List Part */
+
+.main-content .content .feed .stories {
+  overflow: auto;
+}
+.main-content .content .feed .stories-list {
+  display: flex;
+  padding: 1.12rem;
+  gap: 1rem;
+}
+
+.main-content .content .feed .stories-list a li {
+  border-radius: 0.63rem;
+  height: 14rem;
+  width: 7.7rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-content .content .feed .stories-list a li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-content .content .feed .stories-list a li .username {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-15%);
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--white-color);
+}
+
+.main-content .content .feed .stories-list a li .transparent-part {
+  position: absolute;
+  bottom: 0;
+  left: 50;
+  width: 100%;
+  height: 25%;
+  background-color: var(--black-color);
+}
+.main-content .content .feed .stories-list a li .op-90 {
+  opacity: 90%;
+}
+
+.main-content .content .feed .stories-list a li .op-40 {
+  opacity: 40%;
+}
+.main-content .content .feed .stories-list a li .add {
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  padding: 0.6rem 0.5rem 0.5rem 0.5rem;
+}
+
+.main-content .content .feed .stories-list a li .story-float-profile {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  border: 0.2rem solid rgba(0, 0, 0, 0.6);
+}
+
+/* Add post section */
+.main-content .content .feed .add-post {
+  display: flex;
+  gap: 1rem;
+  margin: 1.12rem;
+}
+.main-content .content .feed .post-options {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.12rem;
+}
+.main-content .content .feed .post-options .post-options-list {
+  display: flex;
+  justify-content: space-around;
+} 
+.main-content .content .feed .post-options .post-options-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  line-height: 0.75rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  color: var(--white-color);
+  opacity: 90%;
+  
 }
