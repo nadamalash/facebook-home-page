@@ -162,15 +162,9 @@
           </li>
         </ul>
 
-        <ul class="footer-list">
-          <li>
-            Meta © 2025
-            <span>.</span>
-          </li>
-          <li>
-            @Nada_Malash
-          </li>
-        </ul>
+        <div class="footer-list">
+          Meta © 2025 &nbsp;.&nbsp; @Nada_Malash
+        </div>
       </div>
     </div>
 
@@ -237,7 +231,7 @@
         </ul>
         <!-- navigation bar right buttons-->
         <ul class="right-nav-btns-list">
-          <a href="#">
+          <a href="#" class="dark-icon-btn">
             <li>
               <svg width="17" height="17" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_211_8)">
@@ -268,7 +262,7 @@
               </svg>
             </li>
           </a>
-          <a href="#">
+          <a href="#" class="dark-icon-btn">
             <li>
               <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -276,7 +270,7 @@
               </svg>
             </li>
           </a>
-          <a href="#">
+          <a href="#" class="dark-icon-btn">
             <li>
               <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -329,7 +323,7 @@
                     <span class="icon-btn add">
                       <i class="fa-solid fa-plus fa-lg"></i>
                     </span>
-                    <h3 class="username">Create Story</h3>
+                    <h4 class="username">Create Story</h4>
                   </li>
                 </a>
 
@@ -340,7 +334,7 @@
                     <span class="story-float-profile">
                       <img src="images/profile1.png" alt="Profile picture">
                     </span>
-                    <h3 class="username">Ahmed Mohsen</h3>
+                    <h4 class="username">Ahmed Mohsen</h4>
                   </li>
                 </a>
 
@@ -352,7 +346,7 @@
                     <span class="story-float-profile">
                       <img src="images/profile3.png" alt="Profile picture">
                     </span>
-                    <h3 class="username">Yara Nabil</h3>
+                    <h4 class="username">Yara Nabil</h4>
                   </li>
                 </a>
 
@@ -364,7 +358,7 @@
                     <span class="story-float-profile">
                       <img src="images/profile2.png" alt="Profile picture">
                     </span>
-                    <h3 class="username">Mohamed Ali</h3>
+                    <h4 class="username">Mohamed Ali</h4>
                   </li>
                 </a>
 
@@ -376,7 +370,7 @@
                     <span class="story-float-profile">
                       <img src="images/profile4.png" alt="Profile picture">
                     </span>
-                    <h3 class="username">Dalia Mohamed</h3>
+                    <h4 class="username">Dalia Mohamed</h4>
                   </li>
                 </a>
 
@@ -388,7 +382,7 @@
                     <span class="story-float-profile">
                       <img src="images/profile5.png" alt="Profile picture">
                     </span>
-                    <h3 class="username">Ashraf Tawfik</h3>
+                    <h4 class="username">Ashraf Tawfik</h4>
                   </li>
                 </a>
               </ul>
@@ -397,18 +391,18 @@
 
           <!-- write new post section -->
           <div class="frame">
-            <ul class="add-post">
-              <li class="rounded-img">
+            <div class="add-post">
+              <div class="rounded-img">
                 <a href="#">
                   <span>
                     <img src="images/profile.png" alt="Profile picture">
                   </span>
                 </a>
-              </li>
-              <li class="input-wrapper">
+              </div>
+              <div class="input-wrapper">
                 <input type="text" placeholder="What's on your mind, Ahmed?">
-              </li>
-            </ul>
+              </div>
+            </div>
             <div class="post-options">
               <ul class="post-options-list">
                 <a href="#">
@@ -435,18 +429,311 @@
           </div>
 
           <!-- all posts section -->
-          <div class="posts frame">
+          <div>
+            <ul class="posts-list">
+              <li class="frame">
+                <div class="post-header">
+                  <div class="rounded-img">
+                    <a href="#">
+                      <span>
+                        <img src="images/profile4.png" alt="Profile picture">
+                      </span>
+                    </a>
+                  </div>
+                  <div>
+                    <h3 class="post-user">Dalia Mohamed</h3>
+                    <div class="post-time">
+                      15 hr&nbsp;.&nbsp;
+                      <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="post-body">
+                  "Life is better with a dog by your side 🐾❤️ #UnconditionalLove #DogLife"
+                </p>
+                <div class="post-img-warpper">
+                  <img src="images/story4.jpg" alt="Post image">
+                </div>
+                <div class="likes-count">
+                  <a href="#">
+                    <span class="like-warpper">
+                      <i class="fa-solid fa-thumbs-up fa-xs"></i>
+                    </span>
+                    44
+                  </a>
+                  <a href="#">
+                    40 comments
+                  </a>
+                </div>
+                <ul class="react-options-list">
+                  <li>
+                    <a href="#" class="active">
+                      <i class="fa-solid fa-thumbs-up fa-xl"></i>
+                      Like
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-comment fa-xl"></i>
+                      Comment
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="frame">
+                <div class="post-header">
+                  <div class="rounded-img">
+                    <a href="#">
+                      <span>
+                        <img src="images/profile1.png" alt="Profile picture">
+                      </span>
+                    </a>
+                  </div>
+                  <div>
+                    <h3 class="post-user">Ahmed Mohsen</h3>
+                    <div class="post-time">
+                      15 hr&nbsp;.&nbsp;
+                      <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="post-body">
+                  "Travel is about more than just destinations; it’s about new experiences, unforgettable memories, and
+                  discovering the world—and yourself. 🌍✈️ Where’s your next adventure? #Wanderlust #AdventureAwaits"
+                </p>
+                <div class="post-img-warpper">
+                  <img src="images/story1.jpg" alt="Post image">
+                </div>
+                <div class="likes-count">
+                  <a href="#">
+                    <span class="like-warpper">
+                      <i class="fa-solid fa-thumbs-up fa-xs"></i>
+                    </span>
+                    205
+                  </a>
+                  <a href="#">
+                    100 comments
+                  </a>
+                </div>
+                <ul class="react-options-list">
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-thumbs-up fa-xl"></i>
+                      Like
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-comment fa-xl"></i>
+                      Comment
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
 
         <!-- community panel -->
         <div class="community-panel">
-          <!-- pages-and-profiles, birthdays, contacts -->
+          <!-- pages-and-profiles section-->
+          <div class="community-panel-section frame pages-and-profiles">
+            <h2 class="section-title">Your Pages and profiles</h2>
+            <ul class="pages-list"> 
+              <li class="page">
+                <a href="#" class="page-details">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/wiz-page.jpg" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-red">
+                      4
+                    </div>
+                  </div>
+                  <div class="title-and-uni">
+                    <h3 class="page-title">Wizz Air Egypt</h3>
+                    <h6 class="page-uni-name">@wizz_air</h6>
+                  </div>
+                </a>
+                <a href="#" class="dark-icon-btn page-announce">
+                  <i class="fa-solid fa-bullhorn fa-lg"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- birthdays section -->
+          <div class="community-panel-section frame">
+            <h2 class="section-title">Birthdays</h2>
+            <a href="#" class="birthdays">
+              <i class="fa-solid fa-cake-candles fa-xl"></i>
+              Nada and 2 others have birthdays today.
+            </a>
+          </div>
+
+          <!-- contacts section -->
+          <div class="community-panel-section frame">
+            <div class="contacts-header">
+              <h2 class="section-title">Contacts</h2>
+
+              <ul class="contacts-options-list">
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-video fa-sm"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-magnifying-glass fa-sm"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-gear fa-sm"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="contacts-list">
+       
+              <a href="#">
+                <li class="contact">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/profile5.png" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-green">
+                    </div>
+                  </div>
+                  Ashraf Tawfik
+                </li>
+              </a>
+
+              <a href="#">
+                <li class="contact">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/profile4.png" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-green">
+                    </div>
+                  </div>
+                  Dalia Mohamed
+                </li>
+              </a>
+
+              <a href="#">
+                <li class="contact">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/profile3.png" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-green">
+                    </div>
+                  </div>
+                  Yara Nabil
+                </li>
+              </a>
+
+              <a href="#">
+                <li class="contact">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/profile2.png" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-green">
+                    </div>
+                  </div>
+                  Mohamed Ali
+                </li>
+              </a>
+              <a href="#">
+                <li class="contact">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/profile1.png" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-green">
+                    </div>
+                  </div>
+                  Ahmed Mohsen
+                </li>
+              </a>
+              <a href="#">
+                <li class="contact">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/profile5.png" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-green">
+                    </div>
+                  </div>
+                  Ashraf Tawfik
+                </li>
+              </a>
+
+              <a href="#">
+                <li class="contact">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/profile4.png" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-green">
+                    </div>
+                  </div>
+                  Dalia Mohamed
+                </li>
+              </a>
+
+              <a href="#">
+                <li class="contact">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/profile3.png" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-green">
+                    </div>
+                  </div>
+                  Yara Nabil
+                </li>
+              </a>
+
+              <a href="#">
+                <li class="contact">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/profile2.png" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-green">
+                    </div>
+                  </div>
+                  Mohamed Ali
+                </li>
+              </a>
+              <a href="#">
+                <li class="contact">
+                  <div class="has-notif">
+                    <div class="rounded-img">
+                      <img src="images/profile1.png" alt="Profile picture">
+                    </div>
+                    <div class="notif notif-green">
+                    </div>
+                  </div>
+                  Ahmed Mohsen
+                </li>
+              </a>
+            </ul>
+          </div>
+          <a href="#" class="icon-btn msg">
+            <i class="fa-solid fa-pen-to-square fa-xl"></i>
+          </a>
         </div>
       </div>
-
     </div>
-
   </div>
 </body>
 
